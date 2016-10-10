@@ -43,7 +43,7 @@ function generateOutput($a) {
   if(strpos($a['url'], 'programma.rss') !== false) {
     //remove date
     $match = substr(strstr($item->get_title(), ': '), 2);
-    //get date
+    //get date and format properly
     $date = strtotime($item->get_date());
     $dateTime = strftime("%e %B %R", $date);
 
